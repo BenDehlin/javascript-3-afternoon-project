@@ -120,13 +120,13 @@ function largeNumbers(object){
 */
 
 //Code Here
-function numberGroups(object){
-  if(object.a>object.b && object.a>object.c){
-    return object.a
-  }else if(object.b>object.a && object.b>object.c){
-    return object.b
-  }else if(object.c>object.a && object.c>object.b){
-    return object.c
+function numberGroups({a, b, c}){
+  if(a > b && a > c){
+    return a
+  }else if(b > a && b > c){
+    return b
+  }else if(c > a && c > b){
+    return c
   }
 }
 
