@@ -41,6 +41,11 @@
 
 function showValues( obj ) {
   //Code Here
+  let str = ''
+  for(let x in obj){
+    str.concat(obj.x)
+  }
+  return str
 }
 
 
@@ -54,6 +59,14 @@ function showValues( obj ) {
 */
 
 //Code Here
+function greaterThan10(object){
+  for(let x in obj){
+    if(x>10){
+      x=0
+    }
+  }
+  return object
+}
 
 
 
