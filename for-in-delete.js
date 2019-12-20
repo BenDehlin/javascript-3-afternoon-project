@@ -43,7 +43,7 @@ function showValues( obj ) {
   //Code Here
   let str = ''
   for(let x in obj){
-    str.concat(obj.x)
+    str += obj[x]
   }
   return str
 }
@@ -60,9 +60,9 @@ function showValues( obj ) {
 
 //Code Here
 function greaterThan10(object){
-  for(let x in obj){
-    if(x>10){
-      x=0
+  for(let x in object){
+    if(object[x]>10){
+      object[x]=0
     }
   }
   return object
@@ -79,7 +79,12 @@ function greaterThan10(object){
 */
 
 //Code Here
-
+function double(object){
+  for(x in object){
+    object[x] *= 2
+  }
+  return object
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -93,6 +98,15 @@ function greaterThan10(object){
 */
 
 //Code Here
+function secrets(object){
+  let str = ''
+  for(x in object){
+    if(x.startsWith('sh')){
+      str+=object[x]
+    }
+  }
+  return str
+}
 
 
 
@@ -124,7 +138,10 @@ function greaterThan10(object){
 */
 
 //Code Here
-
+function removePassword(object){
+  delete object.password
+  return object
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -143,6 +160,11 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+for(x in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[x] > 100){
+    delete deleteTheBigNumbers[x]
+  }
+}
 
 
 
@@ -156,6 +178,14 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+function startsWithK(object){
+  for(x in object){
+    if(x.startsWith('k')){
+      delete object[x]
+    }
+  }
+  return object
+}
 
 
 
@@ -171,5 +201,12 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+function hiddenTreasure(object){
+  for(x in object){
+    if(!object[x].includes('treasure')){
+      delete object[x]
+    }
+  }
+  return object
+}
 
