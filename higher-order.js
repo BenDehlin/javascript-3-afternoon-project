@@ -139,18 +139,6 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let test = purchases.filter(x =>{
-  if(x['owner'] === 'Bob'){
-    return x
-  }
-})
-
-let test2 = test.map(x =>{
-  return x.price
-})
-
-let bobsTotal = test2.reduce((x, y) =>{
-  return x + y
-})
+let bobsTotal = purchases.filter(x =>{if(x['owner'] === 'Bob'){return x}}).map(x =>{return x.price}).reduce((x, y) =>{return x + y})
 
 
