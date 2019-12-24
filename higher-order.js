@@ -43,9 +43,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 //Code Here
-let postTaxPrices  = prices.map(x =>{
-  return x * 1.07
-})
+let postTaxPrices  = prices.map(x =>x * 1.07)
 
 
 
