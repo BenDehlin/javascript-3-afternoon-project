@@ -21,13 +21,7 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers = mixedNumbers.filter(x =>{
-  if(x % 2 === 0){
-    return x
-  }
-})
-
-
+let evenNumbers = mixedNumbers.filter(x => x % 2 === 0 ? x : null)
 
 
 ////////// PROBLEM 2 //////////
