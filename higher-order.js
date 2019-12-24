@@ -62,9 +62,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation  = populations.reduce((x, y) => {
-  return x + y
-})
+let totalPopulation  = populations.reduce((x, y) => x + y)
 
 
 
@@ -90,9 +88,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest  = monstersInYourPocket.filter(x => {
-  return x['CP'] > 200
-})
+let myStrongest  = monstersInYourPocket.filter(x => x['CP'] > 200)
 
 
 
@@ -109,9 +105,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
 */
 
-let orderTotals = orders.map((x, y) =>{
-  return x["price"] * (1 + x["tax"])
-})
+let orderTotals = orders.map((x, y) =>x["price"] * (1 + x["tax"]))
 
 
 
@@ -131,6 +125,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal = purchases.filter(x =>{if(x['owner'] === 'Bob'){return x}}).map(x =>{return x.price}).reduce((x, y) =>{return x + y})
+let bobsTotal = purchases.filter(x =>{
+  if(x['owner'] === 'Bob'){
+    return x
+  }})
+  .map(x =>{return x.price})
+  .reduce((x, y) =>{return x + y})
 
 
